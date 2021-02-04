@@ -27,4 +27,9 @@ const getCharmaPoints = () => {
     return charmaPoints;
 }
 
+// Array with the recommendations for the charm points 
+const recommendationsUsePoints = ['use a bad word', " don't say thank you", "don't greet the neighbors"];
+
+
+
 console.log(getCharmaPoints());
