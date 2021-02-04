@@ -1,1 +1,11 @@
-console.log('hello world');
+const taskMessage = {
+    verb: {},
+    article: {},
+    adjective: {},
+    helpNoun: {},
+    preposition: {},
+    theLocationNoun: {},
+    createRandomTask () {
+        
+    }
+}
