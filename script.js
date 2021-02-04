@@ -10,10 +10,13 @@ const taskMessage = {
     theLocationNoun: ['a tree', 'the street'],
     // creates the random generated task with a word from every property
     createRandomTask () {
+        // array for the random generated task
         let randomtask = [];
+        // Object.values returns the entries from each property, which can then be further processed with forEach
         Object.values(taskMessage).forEach(element => {
             randomtask.push(element[Math.floor(Math.random() * element.length)]);
         });
+        // returns a string with the values from the array, each concatenated with a space character
         return randomtask.join(' ');
     }
 }
