@@ -17,5 +17,8 @@ const taskMessage = {
         const randNumHelpNoun = Math.floor(Math.random() * this.helpNoun.length);
         const randNumPrep = Math.floor(Math.random() * this.preposition.length);
         const randNumTheLocation = Math.floor(Math.random() * this.theLocationNoun.length);
+        return `${this.verb[randNumVerb]} ${this.article[randNumArticle]} ${this.adjective[randNumAdjective]} ${this.helpNoun[randNumHelpNoun]} ${this.preposition[randNumPrep]} ${this.theLocationNoun[randNumTheLocation]}`;
     }
 }
+
+console.log(taskMessage.createRandomTask());
