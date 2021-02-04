@@ -21,4 +21,10 @@ const taskMessage = {
     }
 }
 
-console.log(taskMessage.createRandomTask());
+// generates a random number between 1 and 100
+const getCharmaPoints = () => {
+    const charmaPoints = Math.ceil(Math.random() * 100);
+    return charmaPoints;
+}
+
+console.log(getCharmaPoints());
