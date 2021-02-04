@@ -10,14 +10,11 @@ const taskMessage = {
     theLocationNoun: ['a tree', 'the street'],
     // creates the random generated task with a word from every property
     createRandomTask () {
-        // get random number for each array
-        const randNumVerb = Math.floor(Math.random() * this.verb.length); 
-        const randNumArticle = Math.floor(Math.random() * this.article.length);
-        const randNumAdjective = Math.floor(Math.random() * this.adjective.length);
-        const randNumHelpNoun = Math.floor(Math.random() * this.helpNoun.length);
-        const randNumPrep = Math.floor(Math.random() * this.preposition.length);
-        const randNumTheLocation = Math.floor(Math.random() * this.theLocationNoun.length);
-        return `${this.verb[randNumVerb]} ${this.article[randNumArticle]} ${this.adjective[randNumAdjective]} ${this.helpNoun[randNumHelpNoun]} ${this.preposition[randNumPrep]} ${this.theLocationNoun[randNumTheLocation]}`;
+        let randomtask = [];
+        Object.values(taskMessage).forEach(element => {
+            randomtask.push(element[Math.floor(Math.random() * element.length)]);
+        });
+        return randomtask.join(' ');
     }
 }
 
