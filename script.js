@@ -1,11 +1,11 @@
 const taskMessage = {
-    verb: {},
-    article: {},
-    adjective: {},
-    helpNoun: {},
-    preposition: {},
-    theLocationNoun: {},
+    verb: ['rescue', 'help'],
+    article: ['the', 'a'],
+    adjective: ['small', 'black'],
+    helpNoun: ['cat', 'lady'],
+    preposition: ['from', 'on'],
+    theLocationNoun: ['a tree', 'the street'],
     createRandomTask () {
-        
+
     }
 }
