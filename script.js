@@ -12,12 +12,14 @@ const taskMessage = {
     createRandomTask () {
         // array for the random generated task
         let randomtask = [];
+        let randomString = '';
         // Object.values returns the entries from each property, which can then be further processed with forEach
         Object.values(taskMessage).forEach(element => {
             randomtask.push(element[Math.floor(Math.random() * element.length)]);
         });
         // returns a string with the values from the array, each concatenated with a space character
-        return randomtask.join(' ');
+        randomString = randomtask.join(' ');
+        return randomString.slice(0, -1);
     }
 };
 
@@ -27,14 +29,15 @@ function getCharmaPoints() {
     return charmaPoints;
 }
 
-// Array with the recommendations for the charm points 
+// Array with the recommendations for the charma points 
 const recommendationsUsePoints = ['use a bad word', " don't say thank you", "don't greet the neighbors"];
 
 // creates the three final sentences with the randomly created content
 function createRandomMessage() {
-    console.log(`Your task for today is: ${taskMessage.createRandomTask()}.`);
-    console.log(`For this you will get ${getCharmaPoints()} charma points.`);
-    console.log(`You could use them the next time you ${recommendationsUsePoints[Math.floor(Math.random() * recommendationsUsePoints.length)]}.`);
+    const sentence1 = `Your task for today is: ${taskMessage.createRandomTask()}. `;
+    const sentence2 = `For this you will get ${getCharmaPoints()} charma points. `;
+    const sentence3 = `You could use them the next time you ${recommendationsUsePoints[Math.floor(Math.random() * recommendationsUsePoints.length)]}.`;
+    return sentence1 + sentence2 + sentence3;
 }
 
 console.log(createRandomMessage());
